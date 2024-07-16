@@ -31,7 +31,7 @@ export async function Footer() {
             <img
               className={classes.logo}
               alt="Payload Logo"
-              src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
+              src="https://cdn.dribbble.com/users/6254089/screenshots/14453235/media/ae19c0668f55934df546552b9de0d878.jpg"
             />
           </picture>
         </Link>
@@ -40,16 +40,13 @@ export async function Footer() {
           {navItems.map(({ link }, i) => {
             return <CMSLink key={i} {...link} />
           })}
-          <Link href="/admin">Admin</Link>
+          <Link href="/admin">Sản phẩm</Link>
           <Link
             href="https://github.com/payloadcms/payload/tree/main/templates/ecommerce"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Source Code
-          </Link>
-          <Link href="https://payloadcms.com" target="_blank" rel="noopener noreferrer">
-            Payload
+            Liên Hệ
           </Link>
         </nav>
       </Gutter>

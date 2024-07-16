@@ -1,26 +1,32 @@
+/* Import CSS */
 @import '../../_css/common';
 
-.card  {
-  border: 1px var(--theme-elevation-200) solid;
+/* Card Styles */
+.card {
+  border: 1px solid #ddd; /* Bạn có thể thay đổi màu sắc theo ý muốn */
   border-radius: 4px;
   height: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
 
+/* Content Styles */
 .content {
-  padding: var(--base);
+  padding: 16px; /* Giá trị cụ thể thay thế cho var(--base) */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--base) / 2);
+  gap: 8px; /* calc(var(--base) / 2) */
 
-  @include small-break {
-    padding: calc(var(--base) / 2);
-    gap: calc(var(--base) / 4);
+  /* Responsive styling for small screens */
+  @media (max-width: 600px) {
+    padding: 8px; /* calc(var(--base) / 2) */
+    gap: 4px; /* calc(var(--base) / 4) */
   }
 }
 
+/* Title Styles */
 .title {
   margin: 0;
 }
@@ -29,39 +35,46 @@
   text-decoration: none;
 }
 
+/* Center Align */
 .centerAlign {
   align-items: center;
 }
 
+/* Body Styles */
 .body {
   flex-grow: 1;
 }
 
+/* Price Actions */
 .priceActions {
-  gap: var(--base);
+  gap: 16px; /* Giá trị cụ thể thay thế cho var(--base) */
 }
 
+/* Price Styles */
 .price {
   font-weight: 600;
   margin: 0;
 }
 
+/* Leader Styles */
 .leader {
-  @extend %label;
   display: flex;
-  gap: var(--base);
+  gap: 16px; /* Giá trị cụ thể thay thế cho var(--base) */
 }
 
+/* Description Styles */
 .description {
   margin: 0;
 }
 
+/* Hide Image On Mobile */
 .hideImageOnMobile {
-  @include mid-break {
+  @media (max-width: 900px) { /* Bạn có thể điều chỉnh giá trị breakpoint */
     display: none;
   }
 }
 
+/* Media Wrapper */
 .mediaWrapper {
   text-decoration: none;
   display: block;
@@ -69,12 +82,14 @@
   aspect-ratio: 16 / 9;
 }
 
+/* Image Styles */
 .image {
-  object-fit: cover;
+  position: relative;
 }
 
+/* Placeholder Styles */
 .placeholder {
-  background-color: var(--theme-elevation-50);
+  background-color: #f0f0f0; /* Màu cụ thể thay thế cho var(--theme-elevation-50) */
   width: 100%;
   height: 100%;
   display: flex;
@@ -82,11 +97,13 @@
   justify-content: center;
 }
 
+/* Actions Styles */
 .actions {
   display: flex;
   align-items: center;
 
-  @include mid-break {
+  /* Responsive styling for mid screens */
+  @media (max-width: 900px) {
     flex-direction: column;
     align-items: flex-start;
   }

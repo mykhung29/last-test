@@ -37,12 +37,12 @@ export const CartPage: React.FC<{
         <Fragment>
           {cartIsEmpty ? (
             <div className={classes.empty}>
-              Your cart is empty.
+              Chưa có sản phẩm nào.
               {typeof productsPage === 'object' && productsPage?.slug && (
                 <Fragment>
                   {' '}
-                  <Link href={`/${productsPage.slug}`}>Click here</Link>
-                  {` to shop.`}
+                  <Link href={`/${productsPage.slug}`}>Mua ngay</Link>
+                  {` nào.`}
                 </Fragment>
               )}
               {!user && (
@@ -114,7 +114,7 @@ export const CartPage: React.FC<{
                           </h5>
                           <div className={classes.actions}>
                             <label>
-                              Quantity &nbsp;
+                              Số lượng &nbsp;
                               <input
                                 type="number"
                                 className={classes.quantity}
